@@ -1,0 +1,16 @@
+meta {
+  name: メッセージ検索
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{SLACK}}/search.messages?query=Obsidian&sort=timestamp
+  body: none
+  auth: none
+}
+
+query {
+  query: Obsidian
+  sort: timestamp
+}
