@@ -1,0 +1,17 @@
+meta {
+  name: app.bsky.feed.getAuthorFeed
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/xrpc/app.bsky.feed.getAuthorFeed?actor=tadashi-aikawa.bsky.social&filter=posts_no_replies&limit=100
+  body: none
+  auth: none
+}
+
+params:query {
+  actor: tadashi-aikawa.bsky.social
+  filter: posts_no_replies
+  limit: 100
+}

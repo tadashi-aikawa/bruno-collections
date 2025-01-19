@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "name": "Sandbox",
+  "type": "collection",
+  "scripts": {
+    "moduleWhitelist": ["child_process"],
+    "filesystemAccess": {
+      "allow": true
+    }
+  }
+}
+

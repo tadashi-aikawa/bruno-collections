@@ -1,0 +1,25 @@
+meta {
+  name: Create a commit by uploading a file
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/repositories/:workspace/:repo_slug/src
+  body: formUrlEncoded
+  auth: inherit
+}
+
+params:path {
+  repo_slug: bashscripts
+  workspace: tadashi-aikawa
+}
+
+body:form-urlencoded {
+  message: test commit2
+  mash.config: '''
+    readonly ACCESS_LOG_STORAGE="/var/log/httpd/access_log"
+    readonly CATALINA_LOG_STORAGE="/var/log/tomcat/catalina.out"
+  '''
+}
+

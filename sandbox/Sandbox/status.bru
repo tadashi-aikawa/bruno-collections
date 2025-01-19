@@ -1,0 +1,19 @@
+meta {
+  name: status
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://localhost:3000/status/:id?status=end
+  body: none
+  auth: none
+}
+
+params:query {
+  status: end
+}
+
+params:path {
+  id: 100347
+}

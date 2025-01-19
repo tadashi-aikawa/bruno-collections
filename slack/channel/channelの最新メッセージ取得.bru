@@ -1,0 +1,16 @@
+meta {
+  name: channelの最新メッセージ取得
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{SLACK}}/conversations.history?channel=C1J80C5MF&limit=5
+  body: none
+  auth: inherit
+}
+
+params:query {
+  channel: C1J80C5MF
+  limit: 5
+}

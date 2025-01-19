@@ -1,0 +1,16 @@
+meta {
+  name: ファイルのアップロード
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{SLACK}}/files.upload
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  content: hogehoge
+  channels: %23times_tadashi-aikawa
+}

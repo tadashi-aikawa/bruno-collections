@@ -5,14 +5,15 @@ meta {
 }
 
 get {
-  url: {{SLACK}}/search.messages?query=from:me on:today&sort=timestamp
+  url: {{SLACK}}/search.messages?query=from:me&sort=timestamp&count=100
   body: none
   auth: none
 }
 
-query {
-  query: from:me on:today
+params:query {
+  query: from:me
   sort: timestamp
+  count: 100
 }
 
 docs {

@@ -1,0 +1,15 @@
+meta {
+  name: ユーザーグループ一覧の取得
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{SLACK}}/usergroups.list
+  body: none
+  auth: none
+}
+
+docs {
+  https://api.slack.com/methods/conversations.list
+}

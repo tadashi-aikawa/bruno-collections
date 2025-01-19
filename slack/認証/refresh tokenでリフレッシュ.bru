@@ -1,0 +1,18 @@
+meta {
+  name: refresh tokenでリフレッシュ
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{SLACK}}/oauth.v2.access
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  client_id: {{clientId}}
+  client_secret: {{clientSecret}}
+  grant_type: refresh_token
+  refresh_token: {{slack_refresh_token}}
+}

@@ -1,0 +1,17 @@
+meta {
+  name: app.bsky.feed.searchPosts
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/xrpc/app.bsky.feed.searchPosts?author=tadashi-aikawa.bsky.social&since=2025-01-04T00:00:00.000Z&q=リリース
+  body: none
+  auth: none
+}
+
+params:query {
+  author: tadashi-aikawa.bsky.social
+  since: 2025-01-04T00:00:00.000Z
+  q: リリース
+}

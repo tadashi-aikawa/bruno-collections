@@ -1,0 +1,21 @@
+meta {
+  name: hoge
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://reqres.in/api/products/3
+  body: none
+  auth: none
+}
+
+tests {
+  const {execSync} = require("child_process")
+  
+  test("name is correct", async () => {
+  
+    const r = execSync("ls -l", {encoding: "utf-8"})
+    expect(res.getBody().data.id).to.equal(r)
+  })
+}

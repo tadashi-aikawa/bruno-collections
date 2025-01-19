@@ -1,0 +1,21 @@
+meta {
+  name: アクセスできるchannel一覧の取得
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{SLACK}}/users.conversations?exclude_archived=true&limit=999&types=public_channel,private_channel
+  body: none
+  auth: none
+}
+
+params:query {
+  exclude_archived: true
+  limit: 999
+  types: public_channel,private_channel
+}
+
+docs {
+  https://api.slack.com/methods/conversations.list
+}

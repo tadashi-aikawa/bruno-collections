@@ -1,0 +1,19 @@
+meta {
+  name: ユーザー一覧の取得
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{SLACK}}/users.list
+  body: none
+  auth: none
+}
+
+params:query {
+  cursor: 
+}
+
+docs {
+  https://api.slack.com/methods/conversations.list
+}

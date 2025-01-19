@@ -1,0 +1,21 @@
+meta {
+  name: channel一覧の取得
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{SLACK}}/conversations.list?limit=1000&exclude_archived=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  limit: 1000
+  exclude_archived: true
+  ~cursor: dGVhbTpDOVBNQzY3UEI=
+}
+
+docs {
+  https://api.slack.com/methods/conversations.list
+}
